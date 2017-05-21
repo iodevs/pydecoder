@@ -5,9 +5,9 @@ import pytest
 
 from toolz import curry, get_in
 
-from decode.fields import hardcoded, optional, required
+from pydecoder.fields import hardcoded, optional, required
 
-from utils.result import is_ok, is_error, value, ok, error
+from pyresult import is_ok, is_error, value, ok, error
 
 
 @curry

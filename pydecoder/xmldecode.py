@@ -8,7 +8,7 @@ from six.moves import map
 
 from toolz import curry, first
 
-from utils.result import ok, error, rmapn, rmap, and_then as andthen  # pylint: disable=import-error
+from pyresult.result import ok, error, rmapn, rmap, and_then as andthen  # pylint: disable=import-error
 
 
 def to_val(func):

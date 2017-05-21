@@ -5,7 +5,7 @@ import random
 
 import pytest
 
-from decode.xml import (
+from pydecoder.xmldecode import (
     to_int,
     to_float,
     to_val,
@@ -13,7 +13,7 @@ from decode.xml import (
     to_bool,
     null
 )
-from utils.result import is_error, is_ok, value
+from pyresult import is_error, is_ok, value
 
 
 def random_case(string):

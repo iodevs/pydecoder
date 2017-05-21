@@ -2,7 +2,8 @@
 
 from toolz import curry
 
-from utils.result import ok, error, is_ok, and_then, errmap
+from pyresult.result import ok, is_ok
+from pyresult.operators import and_then, errmap
 
 
 @curry
