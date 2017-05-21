@@ -14,8 +14,11 @@ PyDecoder
         :alt: Documentation Status
 
 .. image:: https://pyup.io/repos/github/iodevs/pydecoder/shield.svg
-     :target: https://pyup.io/repos/github/iodevs/pydecoder/
-     :alt: Updates
+        :target: https://pyup.io/repos/github/iodevs/pydecoder/
+        :alt: Updates
+
+.. image:: https://coveralls.io/repos/github/iodevs/pydecoder/badge.svg?branch=master
+        :target: https://coveralls.io/github/iodevs/pydecoder?branch=master
 
 
 A XML, JSON,... decode library

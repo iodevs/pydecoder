@@ -11,10 +11,19 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     # TODO: put package requirements here
+    'six>=1.7.3',
+    'toolz>=0.8.2',
+    'pyresult>=0.2.0',
 ]
 
 test_requirements = [
     # TODO: put package test requirements here
+    'coverage',
+    'flake8',
+    'pytest',
+    'pytest-cov',
+    'tox',
+    'mock',
 ]
 
 setup(
@@ -41,10 +50,8 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
     ],
