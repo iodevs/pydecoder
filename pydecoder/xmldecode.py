@@ -8,7 +8,13 @@ from six.moves import map
 
 from toolz import curry, first
 
-from pyresult.result import ok, error, rmapn, rmap, and_then as andthen  # pylint: disable=import-error
+from pyresult import (
+    ok,
+    error,
+    rmap,
+    fold,
+    and_then as andthen  # pylint: disable=import-error
+)
 
 
 def to_val(func):
@@ -39,7 +45,7 @@ def xml(creator, decoders, tree):
     '''
     values = [decoder(getter(tree)) for decoder in decoders]  # pylint: disable=no-value-for-parameter
 
-    return rmapn(creator, values)
+    return rmap(creator, fold(values))
 
 
 @curry

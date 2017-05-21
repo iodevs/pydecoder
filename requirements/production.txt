@@ -1,3 +1,3 @@
 six>=1.7.3
 toolz>=0.8.2
-pyresult>=0.2.0
+pyresult>=0.3.0
