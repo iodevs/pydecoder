@@ -12,7 +12,7 @@ from pyresult.result import ok, error, rmapn, rmap, and_then as andthen  # pylin
 
 
 def to_val(func):
-    '''Convert itertor to value'''
+    '''Convert iterator to value'''
     @wraps(func)
     def _to_val(iterator_or_value):
         if isinstance(iterator_or_value, Iterator):
