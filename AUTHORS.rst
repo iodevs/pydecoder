@@ -6,6 +6,7 @@ Development Lead
 ----------------
 
 * Jindrich Kralevic Smitka <smitka.j@gmail.com>
+* Ondrej Tucek <ondrej.tucek@gmail.com>
 
 Contributors
 ------------
