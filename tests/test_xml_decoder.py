@@ -68,6 +68,5 @@ def test_xml_return_error_result_with_aggregate_messages(tree):
     )
 
     assert is_error(rv)
-    messages = rv.message.split('\n')
-    for msg in messages:
+    for msg in rv.value:
         assert msg.find(u'Value is empty.') > -1
