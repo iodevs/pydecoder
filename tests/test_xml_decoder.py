@@ -10,8 +10,8 @@ from pydecoder.xmldecode import xml, to_string
 from pyresult import is_ok, is_error, value
 
 
-def creator(*args):
-    return args
+def creator(values):
+    return values
 
 
 @pytest.fixture
@@ -42,7 +42,7 @@ def test_xml_return_ok_result(tree):
     )
 
     assert is_ok(rv)
-    assert value(rv) == ('foo', )
+    assert value(rv) == ['foo', ]
 
 
 def test_xml_return_error_result(tree):
