@@ -4,7 +4,7 @@
 from collections import Iterator
 
 from six import wraps, u, string_types, text_type
-from six.moves import map
+from six.moves import map, reduce
 
 from toolz import curry, first
 
@@ -87,7 +87,7 @@ def to_int(val):
     try:
         return ok(int(val))
     except (TypeError, ValueError) as err:
-        return error(unicode(err))
+        return error(text_type(err))
 
 
 @to_val
@@ -96,7 +96,7 @@ def to_float(val):
     try:
         return ok(float(val))
     except (TypeError, ValueError) as err:
-        return error(unicode(err))
+        return error(text_type(err))
 
 
 @to_val
@@ -105,7 +105,7 @@ def to_string(val):
     if val is None:
         return error(u'Can\'t be null')
 
-    return ok(val) if isinstance(val, text_type) else ok(unicode(val, 'utf-8'))
+    return ok(val) if isinstance(val, text_type) else ok(text_type(val, 'utf-8'))
 
 
 @to_val
