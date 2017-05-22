@@ -62,7 +62,7 @@ def test_to_val_return_error_result_if_iterator_is_empty():
     rv = ftest(i)
 
     assert is_error(rv)
-    assert rv.message == 'Value is empty.'
+    assert rv.value == 'Value is empty.'
 
 
 def test_to_string_return_decoded_result():
