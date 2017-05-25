@@ -28,7 +28,7 @@ test_requirements = [
 
 setup(
     name='pydecoder',
-    version='0.3.0',
+    version='0.4.0',
     description="A XML, JSON,... decode library",
     long_description=readme + '\n\n' + history,
     author="Jindrich Kralevic Smitka",
