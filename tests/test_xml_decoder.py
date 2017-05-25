@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=missing-docstring, import-error, redefined-outer-name, no-value-for-parameter
 
-import pytest
-
 from xml.etree import ElementTree as ET
 
+import pytest
+
 from pydecoder.fields import required
-from pydecoder.xmldecode import xml, to_string
+from pydecoder.xml import xml, to_string
 from pyresult import is_ok, is_error, value
 
 

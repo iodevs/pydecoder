@@ -5,7 +5,7 @@ import random
 
 import pytest
 
-from pydecoder.xmldecode import (
+from pydecoder.xml import (
     to_int,
     to_float,
     to_val,
