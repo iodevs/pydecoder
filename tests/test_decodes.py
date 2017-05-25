@@ -7,8 +7,8 @@ from xml.etree import ElementTree as ET
 import pytest
 
 from pydecoder.fields import required
-from pydecoder.xmldecode import xml, to_string, to_int
-from pydecoder.jsondecode import json
+from pydecoder.xml import xml, to_string, to_int
+from pydecoder.json import json
 from pyresult import is_ok, is_error, value
 
 
