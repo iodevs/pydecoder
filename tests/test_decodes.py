@@ -7,8 +7,8 @@ from xml.etree import ElementTree as ET
 import pytest
 
 from pydecoder.fields import required
-from pydecoder.xml import xml, to_string, to_int
-from pydecoder.json import json
+from pydecoder import xml
+from pydecoder import json
 from pyresult import is_ok, is_error, value
 
 
@@ -50,17 +50,17 @@ IDS = (
     'JSON',
 )
 
+
 def creator(values):
     return values
 
 
-
 @PARAM('decoder, data', DECODERS_AND_DATA, ids=IDS)
 def test_return_ok_result(decoder, data):
-    rv = decoder(
+    rv = decoder.decode(
         creator,
         (
-            required('c', to_string),
+            required('c', decoder.to_string),
         ),
         data
     )
@@ -71,10 +71,10 @@ def test_return_ok_result(decoder, data):
 
 @PARAM('decoder, data', DECODERS_AND_DATA, ids=IDS)
 def test_return_error_result(decoder, data):
-    rv = decoder(
+    rv = decoder.decode(
         creator,
         (
-            required('f', to_string),
+            required('f', decoder.to_string),
         ),
         data
     )
@@ -84,11 +84,11 @@ def test_return_error_result(decoder, data):
 
 @PARAM('decoder, data', DECODERS_AND_DATA, ids=IDS)
 def test_return_error_result_with_aggregate_messages(decoder, data):
-    rv = decoder(
+    rv = decoder.decode(
         creator,
         (
-            required('f', to_string),
-            required('e', to_string),
+            required('f', decoder.to_string),
+            required('e', decoder.to_string),
         ),
         data
     )
@@ -99,10 +99,10 @@ def test_return_error_result_with_aggregate_messages(decoder, data):
 
 
 def test_json_decode_return_ok_result_by_path():
-    rv = json(
+    rv = json.decode(
         creator,
         (
-            required(['a', 2], to_int),
+            required(['a', 2], json.to_int),
         ),
         json_data()
     )
