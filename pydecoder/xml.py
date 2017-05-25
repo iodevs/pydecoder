@@ -41,7 +41,7 @@ def getter(tree, key):
 def xml(creator, decoders, tree):
     '''Run decoders on xml and result pass to creator function
 
-    xml: (*args -> value) -> List Decoder -> ElementTree -> Result value err
+    xml: (args -> value) -> List Decoder -> ElementTree -> Result value err
     '''
     values = [decoder(getter(tree)) for decoder in decoders]  # pylint: disable=no-value-for-parameter
 
