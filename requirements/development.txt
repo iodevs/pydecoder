@@ -10,7 +10,7 @@ pylint==1.7.1
 flake8==3.3.0
 pyflakes==1.5.0
 mccabe==0.6.1
-pytest==3.1.0
+pytest==3.1.1
 pytest-cov==2.5.1
 tox==2.7.0
 coveralls==1.1
