@@ -2,6 +2,7 @@
 '''Decoder structures'''
 
 from pyresult import is_error, value, ok, error
+from six import u
 from toolz import curry
 
 
@@ -19,7 +20,7 @@ def array(factory, vals):
     Result(status='Error', value="'None' isn't list or tuple.")
     '''
     if not isinstance(vals, (list, tuple)):
-        return error('\'{}\' isn\'t list or tuple.'.format(vals))
+        return error(u('\'{}\' isn\'t list or tuple.').format(vals))
 
     result = []
 
