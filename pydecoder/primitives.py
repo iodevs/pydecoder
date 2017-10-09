@@ -25,9 +25,27 @@ def to_float(val):
 
 
 def to_string(val):
-    '''Decode string/value to string'''
+    '''Decode string to string
+
+    to_string :: String -> Result e String
+
+    >>> from pydecoder.primitives import to_string
+
+    Retrun result with decoded string
+
+    >>> to_string('Foo Bar Baz')
+    Result(status='Ok', value='Foo Bar Baz')
+
+    if value isn't string returns error.
+
+    >>> to_string(1234)
+    Result(status='Error', value="'1234' isn't string.")
+    '''
     if val is None:
         return error(u'Can\'t be null')
+
+    if not isinstance(val, text_type):
+        return error(u'\'{0!r}\' isn\'t string.'.format(val))
 
     return ok(val) if isinstance(val, text_type) else ok(text_type(val, 'utf-8'))
 
