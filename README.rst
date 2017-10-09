@@ -33,6 +33,39 @@ Features
 
 * Decode and validate values from XML and JSON.
 
+Install
+-------
+
+To install PyDecoder, run this command in your terminal:
+
+.. code-block:: console
+
+    $ pip install pydecoder
+
+
+Example
+-------
+
+.. code:: python
+
+    >>> from pydecoder.fields import required, optional
+    >>> from pydecoder.json import to_int, to_string, decode
+
+    # Define data
+    >>> data = {'foo': 'Text', 'bar': 1}
+
+    # Describe data
+    >>> decoders = [
+    ...     required('foo', to_string),
+    ...     required('bar', to_int),
+    ...     optional('baz', to_int, -5),
+    ... ]
+
+    # Decode/verify data
+    >>> decode(lambda x: x, decoders, data)
+    Result(status='Ok', value=['Text', 1, -5])
+
+
 Credits
 ---------
 
