@@ -44,7 +44,7 @@ def to_string(val):
     if val is None:
         return error(u'Can\'t be null')
 
-    if not isinstance(val, text_type):
+    if not isinstance(val, string_types):
         return error(u'\'{0!r}\' isn\'t string.'.format(val))
 
     return ok(val) if isinstance(val, text_type) else ok(text_type(val, 'utf-8'))
