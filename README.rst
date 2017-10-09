@@ -31,7 +31,7 @@ A XML, JSON,... decode library
 Features
 --------
 
-* TODO
+* Decode and validate values from XML and JSON.
 
 Credits
 ---------
