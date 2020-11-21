@@ -1,7 +1,7 @@
 -r production.txt
 
 bumpversion==0.5.3
-watchdog==0.8.3
+watchdog==0.10.4
 cryptography==2.0.3
 PyYAML==3.12
 coverage==4.4.1
