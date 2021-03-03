@@ -15,7 +15,7 @@ pytest-cov==2.5.1
 tox==2.9.1
 coveralls==1.2.0
 mock==2.0.0
-hypothesis==3.32.0
+hypothesis==6.4.0
 
 # docs
 Sphinx==1.6.4
