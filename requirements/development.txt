@@ -18,4 +18,4 @@ mock==2.0.0
 hypothesis==3.32.0
 
 # docs
-Sphinx==1.6.4
+Sphinx==4.5.0
